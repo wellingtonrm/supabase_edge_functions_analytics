@@ -1,0 +1,65 @@
+### Device Register - Create new device
+POST http://localhost:8080/device-register
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789",
+  "installationId": "inst9876543210abc",
+  "platform": "android",
+  "appVersion": "1.2.3",
+  "buildNumber": "45",
+  "packageName": "com.guardian.vpn",
+  "timezone": "America/Sao_Paulo",
+  "language": "pt-BR",
+  "timestamp": {{$timestamp}}
+}
+
+### Device Register - Update existing device
+POST http://localhost:8080/device-register
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789",
+  "installationId": "inst9876543210abc",
+  "platform": "android",
+  "appVersion": "1.2.4",
+  "buildNumber": "46",
+  "packageName": "com.guardian.vpn",
+  "timezone": "America/Sao_Paulo",
+  "language": "en-US",
+  "timestamp": {{$timestamp}}
+}
+
+### Device Register - Invalid deviceId (too short)
+POST http://localhost:8080/device-register
+Content-Type: application/json
+
+{
+  "deviceId": "short",
+  "installationId": "inst9876543210abc",
+  "platform": "android",
+  "appVersion": "1.0",
+  "buildNumber": "1",
+  "timestamp": {{$timestamp}}
+}
+
+### Device Register - Invalid platform
+POST http://localhost:8080/device-register
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789",
+  "installationId": "inst9876543210abc",
+  "platform": "ios",
+  "appVersion": "1.0",
+  "buildNumber": "1",
+  "timestamp": {{$timestamp}}
+}
+
+### Device Register - Missing required fields
+POST http://localhost:8080/device-register
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789"
+}

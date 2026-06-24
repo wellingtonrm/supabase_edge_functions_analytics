@@ -1,0 +1,29 @@
+project_id = "guardian-vpn"
+
+[auth]
+enabled = true
+
+[edge_runtime]
+enabled = true
+policy = "per_worker"
+
+[functions.device-register]
+verify_jwt = false
+
+[functions.device-token]
+verify_jwt = false
+
+[functions.device-event]
+verify_jwt = false
+
+[functions.subscription-status]
+verify_jwt = false
+
+[functions.profile-sync]
+verify_jwt = false
+
+[functions.device-bootstrap]
+verify_jwt = false
+
+[analytics]
+enabled = false

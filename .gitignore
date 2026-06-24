@@ -1,0 +1,10 @@
+# Supabase local development
+.branch
+.temp
+.env.local
+
+# Environment variables
+.env
+
+# Database backups
+dump.sql

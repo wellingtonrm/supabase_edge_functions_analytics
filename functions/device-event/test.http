@@ -1,0 +1,48 @@
+### Device Event - VPN connected
+POST http://localhost:8080/device-event
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789",
+  "eventType": "VPN_CONNECTED",
+  "payload": {
+    "server": "us-east-1",
+    "protocol": "wireguard",
+    "latency_ms": 45
+  }
+}
+
+### Device Event - VPN disconnected
+POST http://localhost:8080/device-event
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789",
+  "eventType": "VPN_DISCONNECTED",
+  "payload": {
+    "server": "us-east-1",
+    "duration_seconds": 3600,
+    "bytes_transferred": 1048576
+  }
+}
+
+### Device Event - App crash
+POST http://localhost:8080/device-event
+Content-Type: application/json
+
+{
+  "deviceId": "abc123def456ghi789",
+  "eventType": "APP_CRASH",
+  "payload": {
+    "error": "OutOfMemoryError",
+    "stack": "java.lang.OutOfMemoryError..."
+  }
+}
+
+### Device Event - Missing deviceId
+POST http://localhost:8080/device-event
+Content-Type: application/json
+
+{
+  "eventType": "VPN_CONNECTED"
+}

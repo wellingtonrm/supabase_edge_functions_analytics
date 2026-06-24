@@ -1,0 +1,42 @@
+### Variables
+@deviceId = abc123def456ghi789
+@installationId = inst9876543210abc
+@fingerprint = 374970eb373c078328edaff7fd1da16d0bfe3de6d03683548d868a85b4a187e1
+
+### Device Token - Request valid token
+POST http://localhost:8080/device-token
+Content-Type: application/json
+
+{
+  "deviceId": "{{deviceId}}",
+  "installationId": "{{installationId}}",
+  "fingerprint": "{{fingerprint}}"
+}
+
+### Device Token - Wrong fingerprint
+POST http://localhost:8080/device-token
+Content-Type: application/json
+
+{
+  "deviceId": "{{deviceId}}",
+  "installationId": "{{installationId}}",
+  "fingerprint": "wrong-fingerprint-value"
+}
+
+### Device Token - Wrong deviceId
+POST http://localhost:8080/device-token
+Content-Type: application/json
+
+{
+  "deviceId": "wrong-device-id-123456789",
+  "installationId": "{{installationId}}",
+  "fingerprint": "{{fingerprint}}"
+}
+
+### Device Token - Missing fields
+POST http://localhost:8080/device-token
+Content-Type: application/json
+
+{
+  "deviceId": "{{deviceId}}"
+}

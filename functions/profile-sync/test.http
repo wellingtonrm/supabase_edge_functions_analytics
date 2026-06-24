@@ -1,0 +1,50 @@
+### Variables
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VJZCI6ImFiYzEyM2RlZjQ1NmdoaTc4OSIsImluc3RhbGxhdGlvbklkIjoiaW5zdDk4NzY1NDMyMTBhYmMiLCJmaW5nZXJwcmludCI6IjM3NDk3MGViMzczYzA3ODMyOGVkYWZmN2ZkMWRhMTZkMGJmZTNkZTZkMDM2ODM1NDhkODY4YTg1YjRhMTg3ZTEiLCJ0aWVyIjoiZnJlZSIsImlhdCI6MTc4MTg1Mjg1MiwiZXhwIjoxNzg0NDQ0ODUyfQ.-xo7_kF9N15iNaPQ9UHklNZRUfrQgtFgamRsIeeAGpo
+
+### Profile Sync - Save profile (replace @token with a valid JWT)
+POST http://localhost:8080/profile-sync
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "profile": {
+    "theme": "dark",
+    "notifications": true,
+    "language": "pt-BR",
+    "auto_connect": false,
+    "selected_server": "us-east-1"
+  }
+}
+
+### Profile Sync - Update profile
+POST http://localhost:8080/profile-sync
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "profile": {
+    "theme": "light",
+    "notifications": true,
+    "language": "en-US",
+    "auto_connect": true
+  }
+}
+
+### Profile Sync - No auth header
+POST http://localhost:8080/profile-sync
+Content-Type: application/json
+
+{
+  "profile": {
+    "theme": "dark"
+  }
+}
+
+### Profile Sync - Empty profile
+POST http://localhost:8080/profile-sync
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "profile": {}
+}

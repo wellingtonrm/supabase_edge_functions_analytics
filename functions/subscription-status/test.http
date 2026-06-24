@@ -1,0 +1,22 @@
+### Variables
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VJZCI6ImFiYzEyM2RlZjQ1NmdoaTc4OSIsImluc3RhbGxhdGlvbklkIjoiaW5zdDk4NzY1NDMyMTBhYmMiLCJmaW5nZXJwcmludCI6IjM3NDk3MGViMzczYzA3ODMyOGVkYWZmN2ZkMWRhMTZkMGJmZTNkZTZkMDM2ODM1NDhkODY4YTg1YjRhMTg3ZTEiLCJ0aWVyIjoiZnJlZSIsImlhdCI6MTc4MTg1Mjg1MiwiZXhwIjoxNzg0NDQ0ODUyfQ.-xo7_kF9N15iNaPQ9UHklNZRUfrQgtFgamRsIeeAGpo
+
+### Subscription Status - Check current subscription (replace @token with a valid JWT)
+POST http://localhost:8080/subscription-status
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{}
+
+### Subscription Status - No auth header
+POST http://localhost:8080/subscription-status
+Content-Type: application/json
+
+{}
+
+### Subscription Status - Invalid token
+POST http://localhost:8080/subscription-status
+Authorization: Bearer invalid-jwt-token-here
+Content-Type: application/json
+
+{}
