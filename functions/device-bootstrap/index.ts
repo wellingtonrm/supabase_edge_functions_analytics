@@ -33,6 +33,10 @@ serve(async (req) => {
     }
 
     const payload = validation.payload!
+
+    const jwtSecret = Deno.env.get('JWT_SECRET')
+    if (!jwtSecret) throw new Error('JWT_SECRET not configured')
+
     const supabase = createSupabaseClient()
     const clientInfo = getClientInfo(req)
 
@@ -88,9 +92,6 @@ serve(async (req) => {
       if (insertErr) throw insertErr
       device = inserted as DeviceRecord
     }
-
-    const jwtSecret = Deno.env.get('SUPABASE_JWT_SECRET')
-    if (!jwtSecret) throw new Error('SUPABASE_JWT_SECRET not configured')
 
     const { token, expiresAt } = await createTokenV2(device, jwtSecret)
 

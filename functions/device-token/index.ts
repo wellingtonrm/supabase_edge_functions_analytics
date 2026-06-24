@@ -35,6 +35,9 @@ serve(async (req) => {
       )
     }
 
+    const jwtSecret = Deno.env.get('JWT_SECRET')
+    if (!jwtSecret) throw new Error('JWT_SECRET not configured')
+
     const supabase = createSupabaseClient()
     const clientInfo = getClientInfo(req)
 
@@ -56,9 +59,6 @@ serve(async (req) => {
       console.log(`[device-token] Device not found: ${deviceHash}`)
       return jsonResponse({ success: false, error: 'Device not found. Please register first.', code: 'DEVICE_NOT_FOUND' }, 404)
     }
-
-    const jwtSecret = Deno.env.get('SUPABASE_JWT_SECRET')
-    if (!jwtSecret) throw new Error('SUPABASE_JWT_SECRET not configured')
 
     const { token, expiresAt } = await createTokenV2(device as DeviceRecord, jwtSecret)
 

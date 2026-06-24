@@ -21,8 +21,8 @@ serve(async (req) => {
       return jsonResponse({ success: false, error: 'Missing or invalid authorization', code: 'UNAUTHORIZED' }, 401)
     }
 
-    const jwtSecret = Deno.env.get('SUPABASE_JWT_SECRET')
-    if (!jwtSecret) throw new Error('SUPABASE_JWT_SECRET not configured')
+    const jwtSecret = Deno.env.get('JWT_SECRET')
+    if (!jwtSecret) throw new Error('JWT_SECRET not configured')
 
     const claims = await verifyToken(authHeader.slice(7), jwtSecret)
     if (!claims) {
