@@ -25,5 +25,11 @@ verify_jwt = false
 [functions.device-bootstrap]
 verify_jwt = false
 
+[functions.import-blocklists]
+verify_jwt = true
+
+[functions.api]
+verify_jwt = false
+
 [analytics]
 enabled = false
