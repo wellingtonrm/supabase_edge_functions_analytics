@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/"
+  },
+  "tasks": {
+    "serve:upload": "supabase functions serve upload-file --env-file ../.env",
+    "serve:delete": "supabase functions serve delete-file --env-file ../.env",
+    "serve:signed": "supabase functions serve signed-url --env-file ../.env"
+  }
+}
