@@ -2,7 +2,7 @@
 .branch
 .temp
 .env.local
-
+node_modules
 # Environment variables
 .env
 

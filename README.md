@@ -1,4 +1,4 @@
-# Supabase Edge Functions — Coletor de dados analytics e upload de arquivos Storage
+# Supabase Edge Functions — analytics Microserviçoes Leves
 
 API de storage serverless com Supabase Edge Functions (Deno). Faz upload, remoção e geração de URLs assinadas no bucket `uploads`.
 

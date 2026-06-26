@@ -1,0 +1,32 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "devDependencies": {
+        "supabase": "^2.108.0",
+      },
+    },
+  },
+  "packages": {
+    "@supabase/cli-darwin-arm64": ["@supabase/cli-darwin-arm64@2.108.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-QHuH0hVDqu10qc8me0FL8YfaDmXslQp4s7/WwD06O5hR1+Zj12FiWLcXgyWUHZoHsZzAA3ZVi2XpU7rBkJFWIQ=="],
+
+    "@supabase/cli-darwin-x64": ["@supabase/cli-darwin-x64@2.108.0", "", { "os": "darwin", "cpu": "x64" }, "sha512-+qFUFqm/3vntX52ZKO6rYbJzWF/+mIoJLRWWckDu3jf9A7VeQskpIs2gxmW2XLwH0LWy8CEml8UzD8WhKn7fuw=="],
+
+    "@supabase/cli-linux-arm64": ["@supabase/cli-linux-arm64@2.108.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-gC2ivtE0/DDNSJX7Q148HeylI+Mqv8eWr86j7FsnoRBdLjVQyVEZIrl32+avhGQO349QiIaFI1eDIzHr9sczDw=="],
+
+    "@supabase/cli-linux-arm64-musl": ["@supabase/cli-linux-arm64-musl@2.108.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-6zFFvvdz8Ty4Q9qiAkjgiS01z1uOuQdageC341HzAD5Ev50ringzzu9SQtDSDy2QeD04YWjvENvZWgsemVwffA=="],
+
+    "@supabase/cli-linux-x64": ["@supabase/cli-linux-x64@2.108.0", "", { "os": "linux", "cpu": "x64" }, "sha512-umNOdOmUznlLJlE3j5nHabwm7aH07GZdk2l7kTFUYJhUyLrcIk9bqc7kUw5bjLCjiuIxuNPTfElBkE1GFhBKPw=="],
+
+    "@supabase/cli-linux-x64-musl": ["@supabase/cli-linux-x64-musl@2.108.0", "", { "os": "linux", "cpu": "x64" }, "sha512-X3cCfgVprMDqN9QFVXzoYwV0E6gQWdUmdbI7ro8vam0/JaoLunNNdAErVmyqGKfrAVu01X6EdEeZAdfgucIN6w=="],
+
+    "@supabase/cli-windows-arm64": ["@supabase/cli-windows-arm64@2.108.0", "", { "os": "win32", "cpu": "arm64" }, "sha512-yd9lYoeLRdQ3dukQAFCqmAZ7wQebbSmZW5IGeEfmcWY3efXT5Y2Dxx2R8CidO32DuJ8SFTtgzhc9lAu3U5WP5Q=="],
+
+    "@supabase/cli-windows-x64": ["@supabase/cli-windows-x64@2.108.0", "", { "os": "win32", "cpu": "x64" }, "sha512-I24rpbFye5vkoFzuxH7rB4BCSvHY+Eg1LTxbvxQ7IWZTM7xRwvqXgsvmqQpwctwGsIbWZIl6DQ3T39x8yV7F2Q=="],
+
+    "jose": ["jose@6.2.3", "", {}, "sha512-YYVDInQKFJfR/xa3ojUTl8c2KoTwiL1R5Wg9YCydwH0x0B9grbzlg5HC7mMjCtUJjbQ/YnGEZIhI5tCgfTb4Hw=="],
+
+    "supabase": ["supabase@2.108.0", "", { "dependencies": { "jose": "^6.2.3" }, "optionalDependencies": { "@supabase/cli-darwin-arm64": "2.108.0", "@supabase/cli-darwin-x64": "2.108.0", "@supabase/cli-linux-arm64": "2.108.0", "@supabase/cli-linux-arm64-musl": "2.108.0", "@supabase/cli-linux-x64": "2.108.0", "@supabase/cli-linux-x64-musl": "2.108.0", "@supabase/cli-windows-arm64": "2.108.0", "@supabase/cli-windows-x64": "2.108.0" }, "bin": { "supabase": "dist/supabase.js" } }, "sha512-NofgZCCWJTZIVVf3m9mMRr3oVZROeBSTJB4bAmP1MvmhO+jUq7U+HvF1NPqFdvmZA5PKx4vRtpjvg7g6LbeD+w=="],
+  }
+}
